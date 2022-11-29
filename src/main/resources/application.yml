@@ -1,0 +1,6 @@
+dxf:
+    url: http://10.0.11.108:8093/sinomes
+
+jasypt:
+  encryptor:
+      password: salt
