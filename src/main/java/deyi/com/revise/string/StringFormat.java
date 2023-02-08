@@ -17,6 +17,7 @@ public class StringFormat {
     }
     public void test() {
         List<String> content = new ArrayList<>();
+        content.add(String.format("{%s}--%s通知","liudy23","suyao"));
         content.add(String.format("检验单号：**%s**", "GYJL-007"));
         content.add(String.format("检验类型：**%s**", "通用"));
         content.add(String.format("检验结果：**%s**", "合格"));

@@ -1,5 +1,7 @@
 package deyi.com.revise.date.calendar;
 
+import org.apache.commons.lang3.time.DateFormatUtils;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -7,7 +9,9 @@ import java.util.Date;
 public class addDay {
     public static void main(String[] args) {
         // addDays(new Date());
-        addDays();
+        // addDays();
+        subMonth();
+
     }
 
     public static void addDays(Date date) {
@@ -31,6 +35,18 @@ public class addDay {
         calendar.setTime(new Date());
         calendar.add(Calendar.DATE, 3 );
         System.out.println(sdf.format(calendar.getTime()));
+    }
+
+    public static void subMonth() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println("当前时间：" + format.format(new Date()));
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date());
+        c.add(Calendar.MONTH, -2);
+        Date time = c.getTime();
+        System.out.println("调整时间：" + format.format(time));
+        String format1 = DateFormatUtils.format(c.getTime(), "yyyy-MM-dd HH:mm:ss");
+        System.out.println("ff:" + format1);
     }
 
 }

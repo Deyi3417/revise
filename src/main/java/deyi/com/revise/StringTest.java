@@ -1,15 +1,17 @@
 package deyi.com.revise;
 
+import java.util.Locale;
+import java.util.UUID;
+
 /**
  * @Author HP
  * @create 2021/12/3 8:15
  */
 public class StringTest {
     public static void main(String[] args) {
-        test01();
-        test02();
-        test03();
-        test04();
+        String s = UUID.randomUUID().toString().replace("-", "").toUpperCase(Locale.ROOT);
+        System.out.println(s);
+
     }
 
     /**
@@ -17,29 +19,30 @@ public class StringTest {
      * 最好使用instanceof做一个类型检查，以判断是否可以进行强转，否则容易抛出
      * ClassCastException异常。
      */
-    public static void test01(){
+    public static void test01() {
         int a = 3;
         String b = String.valueOf(a);
         System.out.println(b.equals(a));
     }
-    public static void test02(){
+
+    public static void test02() {
         Object a = 6;
-        if (a instanceof String){
+        if (a instanceof String) {
             String b = (String) a;
             System.out.println(b);
-        }else {
+        } else {
             System.out.println("error");
         }
     }
 
-    public static void test03(){
+    public static void test03() {
         //Integet 封装类型
         Integer a = 9;
         String s = a.toString();
         System.out.println(s);
     }
 
-    public static void test04(){
+    public static void test04() {
         ///推荐使用String.valueof();
         Integer a = 12;
         String s = String.valueOf(a);
