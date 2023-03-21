@@ -27,7 +27,7 @@ public class GsonLearning {
     public static void testGSON() {
 
         Gson gson = new Gson();
-        List<String> list = gson.fromJson(dateString, new TypeToken<List<String>>() {
+        List<String> list = gson.fromJson(dateString02, new TypeToken<List<String>>() {
         }.getType());
         System.out.println("GSON: " + list);
     }
