@@ -14,10 +14,10 @@ public class Person {
         System.out.println(date);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        System.out.println(calendar.DATE);
+        System.out.println(Calendar.DATE);
         Date time = calendar.getTime();
         System.out.println(time);
-        calendar.add(calendar.DATE,3);
+        calendar.add(Calendar.DATE,3);
         System.out.println(calendar.getTime());
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
