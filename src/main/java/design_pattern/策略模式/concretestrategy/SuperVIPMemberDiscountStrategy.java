@@ -11,6 +11,7 @@ import java.math.RoundingMode;
  * @author HP
  */
 public class SuperVIPMemberDiscountStrategy implements DiscountStrategy {
+    @Override
     public BigDecimal calculateDiscount(BigDecimal price) {
         return price.multiply(new BigDecimal(0.7)).setScale(2, RoundingMode.HALF_UP);
     }
