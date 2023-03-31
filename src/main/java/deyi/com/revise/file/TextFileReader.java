@@ -1,12 +1,17 @@
 package deyi.com.revise.file;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 将文本文件读取为字符串
@@ -38,5 +43,21 @@ public class TextFileReader {
 
         }
         return StringUtils.EMPTY;
+    }
+
+    public static String writeFile(String filePath) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("name","suyao");
+        map.put("age","20");
+        map.put("job","一名优秀的人民教师");
+        String willWriteMap = JSON.toJSONString(map);
+        try {
+            Path path = Paths.get(filePath);
+            Files.write(path, willWriteMap.getBytes(StandardCharsets.UTF_8));
+            return willWriteMap;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "error";
     }
 }

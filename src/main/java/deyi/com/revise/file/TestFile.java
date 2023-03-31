@@ -8,6 +8,7 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 import static deyi.com.revise.file.TextFileReader.readFile;
+import static deyi.com.revise.file.TextFileReader.writeFile;
 
 /**
  * @author : HP
@@ -16,6 +17,7 @@ import static deyi.com.revise.file.TextFileReader.readFile;
 public class TestFile {
 
     public static final String TEXT_FILE_PATH = "templates/user_data.json";
+    public static final String WRITE_TEXT_FILE_PATH = "D:/tmp/usercenter/tempFile/writeTest.txt";
 
     public static void main(String[] args) {
         String result = readFile(TEXT_FILE_PATH);
@@ -23,15 +25,13 @@ public class TestFile {
         Type type = new TypeToken<Map<String, Object>>() {
         }.getType();
         Gson gson = new Gson();
-        Map<String, Object> map = gson.fromJson(result, type);
-        System.out.println("map: " + map);
-        for (String s : map.keySet()) {
-            System.out.println("key: " + s);
-            System.out.println("value: " + map.get(s));
-        }
+        Map<String, Object> gsonMap = gson.fromJson(result, type);
+        System.out.println("gson to map: " + gsonMap);
 
-        Map<String, Object> jsonObject = JSON.parseObject(result);
-        System.out.println("jsonObject: " + jsonObject);
+        Map<String, Object> jsonMap = JSON.parseObject(result);
+        System.out.println("json to map: " + jsonMap);
+        String writeResult = writeFile(WRITE_TEXT_FILE_PATH);
+        System.out.println("writeResult: " + writeResult);
     }
 
 }
