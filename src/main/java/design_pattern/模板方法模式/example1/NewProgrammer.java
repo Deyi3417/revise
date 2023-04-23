@@ -12,6 +12,6 @@ public class NewProgrammer extends Person {
      */
     @Override
     public void behavior() {
-        System.out.println("程序员在编程中---new---");
+        System.out.println("程序员programmer在编程中---new---");
     }
 }
