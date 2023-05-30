@@ -24,4 +24,6 @@ public class User implements Serializable {
     private Integer age;
 
     private Integer gender;
+
+    private int sort;
 }
