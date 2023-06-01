@@ -1,5 +1,6 @@
 package deyi.com.revise.map;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,4 +24,16 @@ public class nullMap {
             System.out.println("Map清空：" + map.get("chiyan"));
         }
     }
+
+    public void nullMap() {
+        Map<String, Map<String, Object>> results = new HashMap<>();
+        Map<String, Object> au = new HashMap<>();
+        au = results.get("123");
+        // 此处au为null,
+        System.out.println(au);
+        // au为null不能再添加，会报npe的错
+        au.put("12",23);
+        System.out.println(au);
+    }
+
 }

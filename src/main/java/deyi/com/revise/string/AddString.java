@@ -1,9 +1,10 @@
 package deyi.com.revise.string;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.DateUtils;
+
+import java.math.BigDecimal;
+import java.util.*;
 
 /**
  * @author : HP
@@ -11,8 +12,24 @@ import java.util.List;
  */
 public class AddString {
     public static void main(String[] args) {
-        split();
 
+        String format = String.format("borrow_status = %d", 3);
+        System.out.println(format);
+
+        String fieldName = "";
+        System.out.println("test:  " + fieldName);
+        fieldName = "deyi is so handsome";
+        System.out.println(fieldName);
+        fieldName = "你可以的，加油";
+        System.out.println(fieldName);
+        Date date = new Date();
+        Date time = date;
+        System.out.println(date.equals(time));
+        BigDecimal a = new BigDecimal(2.3);
+        Double b = 2.3;
+        String s = String.valueOf(b);
+        System.out.println("double : " + s);
+        System.out.println(a.equals(b));
     }
 
     static void joinString() {

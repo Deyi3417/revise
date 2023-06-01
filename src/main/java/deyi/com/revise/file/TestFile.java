@@ -32,6 +32,8 @@ public class TestFile {
         System.out.println("json to map: " + jsonMap);
         String writeResult = writeFile(WRITE_TEXT_FILE_PATH);
         System.out.println("writeResult: " + writeResult);
+        String extension = WRITE_TEXT_FILE_PATH.substring(WRITE_TEXT_FILE_PATH.lastIndexOf(".") + 1);
+        System.out.println("extension:" + extension);
     }
 
 }
