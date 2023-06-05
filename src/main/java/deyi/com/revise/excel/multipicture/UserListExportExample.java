@@ -3,21 +3,24 @@ package deyi.com.revise.excel.multipicture;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.coobird.thumbnailator.Thumbnails;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.util.IOUtils;
 import org.apache.poi.util.Units;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class UserListExportExample {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         long startTime = System.currentTimeMillis();
         List<User> userList = getUserList(); // 获取List<User>数据
 
@@ -56,7 +59,14 @@ public class UserListExportExample {
 
             for (int j = 0; j < pictureCount; j++) {
                 String picturePath = pictures.get(j);
+//                FileInputStream imageStream = new FileInputStream(picturePath);
+
+                // 加载原始图片
                 FileInputStream imageStream = new FileInputStream(picturePath);
+                BufferedImage originalImage = Thumbnails.of(imageStream).asBufferedImage();
+
+
+
                 byte[] imageBytes;
                 try {
                     imageBytes = IOUtils.toByteArray(imageStream);
@@ -124,7 +134,7 @@ public class UserListExportExample {
 //        );
         ArrayList<User> users = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
-            User user = new User("落苏谣", "1", "18811553417", "18811553417@163.com", "湖南", Arrays.asList("D:\\tmp\\activiti\\liudy23.jpg", "D:\\tmp\\activiti\\ldylsy.jpg"));
+            User user = new User("落苏谣", "1", "18811553417", "18811553417@163.com", "湖南", Arrays.asList("D:\\tmp\\activiti\\liudy23.jpg", "D:\\tmp\\activiti\\water.jpg"));
             users.add(user);
         }
         return users;
