@@ -1,7 +1,19 @@
 package deyi.com.revise.string;
 
+import java.io.File;
+
 public class SplitString {
     public static void main(String[] args) {
+        String bpmnFilePath = "D:/temp/activiti/process.bpmn";
+
+        String substring1 = bpmnFilePath.substring(bpmnFilePath.lastIndexOf("/") + 1);
+        System.out.println("substring: " + substring1);
+
+        File file = new File(bpmnFilePath);
+        String fileName = file.getName();
+        System.out.println("fileName: " + fileName);
+
+
         String[] array = {"007","deyi","suyao","chiyan","009"};
 
         StringBuilder sb = new StringBuilder();

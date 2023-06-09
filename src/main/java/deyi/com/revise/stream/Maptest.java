@@ -1,8 +1,7 @@
 package deyi.com.revise.stream;
 
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author : HP
@@ -10,6 +9,9 @@ import java.util.Map;
  */
 public class Maptest {
     public static void main(String[] args) {
-        Map<String, List<String>> provinces = new HashMap<>();
+        List<Integer> ids = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        if (ids.contains(5)) {
+            System.out.println("liudy23 is so handsome");
+        }
     }
 }
