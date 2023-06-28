@@ -272,18 +272,26 @@
             <systemPath>D:/DownloadFile/GoogleDownload/2023-05/kabeja-0.4/lib/pdf-transcoder.jar</systemPath>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-jexl3</artifactId>
-            <version>3.2.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-jexl3</artifactId>-->
+<!--            <version>3.2.1</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>6.0.3</version>
+            <version>5.3.9</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mvel/mvel2 -->
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>2.4.12.Final</version>
+        </dependency>
+
 
 
 

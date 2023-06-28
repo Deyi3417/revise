@@ -1,5 +1,8 @@
 package deyi.com.revise.list;
 
+import io.swagger.models.auth.In;
+
+import java.sql.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -9,12 +12,14 @@ import java.util.stream.Collectors;
 public class Test {
     public static void main(String[] args) {
 
-        Map<String, Map<String, Object>> results = new HashMap<>();
-        Map<String, Object> au = new HashMap<>();
-        au = results.get("123");
-        System.out.println(au);
-        au.put("12",23);
-        System.out.println(au);
+        ArrayList<Integer> list = new ArrayList<>();
+        test01(list);
+        System.out.println("list: " + list);
+    }
 
+    private static void test01(ArrayList<Integer> list) {
+        list.add(1);
+        list.add(2);
+        list.add(9);
     }
 }
