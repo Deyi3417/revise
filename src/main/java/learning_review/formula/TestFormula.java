@@ -9,6 +9,14 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class TestFormula {
     public static void main(String[] args) {
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("====测试:" + i);
+            if (i == 3) {
+                System.out.println("结束标志");
+                break;
+            }
+        }
 //        System.out.println(1>1);
 //        System.out.println("dy"=="dy");
 //        System.out.println("1"=="2");
@@ -43,7 +51,7 @@ public class TestFormula {
         context.set("materialName", materialName);
         context.set("dimension", dimension);
         context.set("weight", weight);
-        context.set("storagePosition", address);
+        context.set("storagePosition", "");
 
         return (boolean) expression.evaluate(context);
     }
