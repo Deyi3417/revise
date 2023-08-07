@@ -1,5 +1,7 @@
 package learning_review;
 
+import lombok.Data;
+
 /**
  * 方法重载特点：在同一个类中，方法名相同，参数列表不同。
  * 支持，在一个类当中构造方法可以有多个，并且所有的构造方法名字都是一样的。
@@ -12,6 +14,7 @@ package learning_review;
  * @author : HP
  * @date : 2022/11/29
  */
+@Data
 public class User {
     int id;
     String name;
