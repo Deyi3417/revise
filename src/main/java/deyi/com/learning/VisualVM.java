@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 学习jvm内存学习 VisualVM Management
+ *
  * @author : liudy23
  * @data : 2023/8/7
  */
