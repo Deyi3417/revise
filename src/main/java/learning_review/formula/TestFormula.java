@@ -29,6 +29,7 @@ public class TestFormula {
     }
 
     public static boolean validate(String materialName, int dimension, int weight, String address) {
+
         JexlEngine jexlEngine = new JexlBuilder().create();
         materialName.startsWith("start");
         materialName.endsWith("end");
