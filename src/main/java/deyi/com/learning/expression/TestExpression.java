@@ -6,6 +6,8 @@ import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 /**
+ * 测试逻辑表达式
+ *
  * @author : HP
  * @date : 2023/6/26
  */
@@ -26,7 +28,7 @@ public class TestExpression {
         context.setVariable("x", 9);
         context.setVariable("y", 8);
         // 执行表达式并获取结果
-        boolean result = Boolean.TRUE.equals(expression.getValue(context,Boolean.class));
+        boolean result = Boolean.TRUE.equals(expression.getValue(context, Boolean.class));
         // 输出结果
         System.out.println("Result-01: " + result);
     }
