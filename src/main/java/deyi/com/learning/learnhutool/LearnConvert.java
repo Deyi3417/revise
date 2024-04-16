@@ -14,7 +14,7 @@ public class LearnConvert {
     public static void learnConvert() {
         String number = "123";
         int numberTemp = Convert.toInt(number);
-        int number2 = Integer.parseInt(number);
+        Integer number2 = Integer.parseInt(null);
         System.out.println("Number: " + number);
         System.out.printf("使用hutool转化的结果：%d\n\t", numberTemp);
         System.out.printf("使用Integer.parseInt转化的结果：%d%n", number2);
